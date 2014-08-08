@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:gap="http://phonegap.com/ns/1.0" id="com.coolappz.nbplayer" version="1.0.0">
+    <name>tracker</name>
+    <description>
+        low latency audio tracker test
+    </description>
+    <author email="support@bluebit.co.uk" href="http://www.bluebit.co.uk">
+        Bluebit
+    </author>
+    <gap:plugin name="com.rjfun.cordova.plugin.lowlatencyaudio" version="1.0" />
+    <gap:plugin name="org.apache.cordova.media"/>
+    <content src="index.html"/>
+    <access origin="*"/>
+    
+</widget>
