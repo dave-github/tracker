@@ -8,7 +8,7 @@
         Bluebit
     </author>
     <gap:plugin name="org.apache.cordova.media" />
-    <gap:plugin name="com.rjfun.cordova.plugin.lowlatencyaudio" />
+   
     <content src="index.html"/>
     <access origin="*"/>
     
