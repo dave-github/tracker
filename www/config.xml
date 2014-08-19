@@ -7,8 +7,8 @@
     <author email="support@bluebit.co.uk" href="http://www.bluebit.co.uk">
         Bluebit
     </author>
-    <gap:plugin name="com.rjfun.cordova.plugin.lowlatencyaudio"/>
-    <gap:plugin name="org.apache.cordova.media"/>
+    <gap:plugin name="com.rjfun.cordova.plugin.lowlatencyaudio" />
+    <gap:plugin name="org.apache.cordova.media" />
     <content src="index.html"/>
     <access origin="*"/>
     
