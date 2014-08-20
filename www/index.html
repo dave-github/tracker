@@ -19,33 +19,67 @@
                     var PGLowLatencyAudio = window.plugins.LowLatencyAudio;
              
                     PGLowLatencyAudio.preloadAudio('drums', "VFH1 128BPM Heavy Duty Kit 1.wav", 1);
+                    PGLowLatencyAudio.preloadAudio('drums2', "VFH1 128BPM Flatbeat Kit 1.wav", 1);
                     PGLowLatencyAudio.preloadAudio('melody', "VFH1 128BPM Heavy Duty Melody 1.wav", 1);
-
+                    PGLowLatencyAudio.preloadAudio('melody2', "VFH1 128BPM Dogde Melody 1.wav", 1);
+                    PGLowLatencyAudio.preloadAudio('melody3', "VFH1 128BPM Dogde Melody 2.wav", 1);
                     //PGLowLatencyAudio.loop('drums');
                     //PGLowLatencyAudio.play('melody');  
 
                     $("#stop").touchstart(function() {
                         PGLowLatencyAudio.stop('drums');
                         PGLowLatencyAudio.stop('melody');
+                        PGLowLatencyAudio.stop('melody2');
+                        PGLowLatencyAudio.stop('melody3');
                     });
                     
                      $("#drum").touchstart(function() {
                         PGLowLatencyAudio.loop('drums');
                     });
+                    
+                    $("#drum2").touchstart(function() {
+                        PGLowLatencyAudio.loop('drums2');
+                    });
+                    
                     $("#melody").touchstart(function() {
                         PGLowLatencyAudio.loop('melody');
                     });
                     
+                    $("#melody2").touchstart(function() {
+                        PGLowLatencyAudio.loop('melody2');
+                    });
+                     $("#melody3").touchstart(function() {
+                        PGLowLatencyAudio.loop('melody3');
+                    });
+                    
                     $("#stop_drum").touchstart(function() {
                         PGLowLatencyAudio.stop('drums');
+                        PGLowLatencyAudio.stop('drums2');
                     });
                     $("#stop_melody").touchstart(function() {
                         PGLowLatencyAudio.stop('melody');
+                        PGLowLatencyAudio.stop('melody2');
+                        PGLowLatencyAudio.stop('melody3');
+                        
                     });
 
                     $("#play").touchstart(function() {
-                        PGLowLatencyAudio.loop('drums');
-                        PGLowLatencyAudio.loop('melody');
+                        
+                        timer = setTimeout(function (event) {
+
+                            console.log('starting...');
+                            PGLowLatencyAudio.loop('drums');
+                            PGLowLatencyAudio.loop('melody');
+                            PGLowLatencyAudio.loop('melody2');
+                            PGLowLatencyAudio.loop('melody3');
+                            PGLowLatencyAudio.loop('drums2');
+
+                            $('#textTobeSearched').text(text);
+                        }, 2000);
+                        
+                        
+                        
+                        
                     });
                 });
             });
@@ -55,8 +89,11 @@
     <body>
     <style> a { line-height:60px; font-size:20px }</style>
     <a href="#" class="btn large" id="play">Play Drums & Melody</a><br>
-    <a href="#" class="btn large" id="drum">Play Drum</a><br>
+    <a href="#" class="btn large" id="drum">Play Drums</a><br>
+    <a href="#" class="btn large" id="drum2">Play Drums 2</a><br>
     <a href="#" class="btn large" id="melody">Play Melody</a><br>
+    <a href="#" class="btn large" id="melody2">Play Melody 2</a><br>
+    <a href="#" class="btn large" id="melody3">Play Melody 3</a><br>
     <a href="#" class="btn large" id="stop_drum">stop Drum</a><br>
     <a href="#" class="btn large" id="stop_melody">stop Melody</a><br>
     <a href="#" class="btn large" id="stop">Stop Playing</a><br>
